@@ -48,10 +48,3 @@ with open('app_times.csv', mode='w', newline='') as file:
         avg_time = app_data['avg_time']
         row = [app_num, app_name] + times + [avg_time]
         writer.writerow(row)
-
-with open('app_names.csv', mode='w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerow(['App Number', 'App Name'])
-
-    for app_num, app_name in app_names:
-        writer.writerow([app_num, app_name])
